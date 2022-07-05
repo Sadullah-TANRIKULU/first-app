@@ -1,44 +1,33 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+//? React,JSX kullanmaktadir.
+//? JSX'de, HTMl elementleri dogrudan JS icerisinde kullanilabilir
+
+//! Componentler, HTML,CSS ve JS kodlarindan meydana gelmiş
+//! bir kod parcacigidir.
+
+//! Bir componentin return () kismi ise JSX kodlari icerir.
+
+//! JSX'in kendine gore bazi kurallari vardir. Ornegin bir
+//! component eger birden fazla html elementi dondurmesi
+//! gerekirse bunlari tek bir container elemani ile sarmayalarak
+//! dondurmelidir.container icin div, article, header, <> v.b
+//! herhangi bir element kullanilabilir.
+
+//? App componentinin tanimlanmasi
 import './App.css'
+import Content from './Content'
+import Footer from './Footer'
+import Header from './Header'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+    <Header/>
+    <Content/>
+    <Footer/>
+    </>
   )
 }
 
